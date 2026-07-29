@@ -53,6 +53,10 @@
 </li>
 
 <li class="nav-item">
+<a class="nav-link" href="#reviews">Reviews</a>
+</li>
+
+<li class="nav-item">
 <a class="nav-link" href="#contact">Contact</a>
 </li>
 
@@ -67,22 +71,32 @@
 
 <section id="home" class="hero">
 
-<div class="hero-content">
+  <div class="hero-slider" aria-hidden="false">
+    <div class="hero-slide" style="background-image:url('images/food.jpg')" aria-hidden="true"></div>
+    <div class="hero-slide" style="background-image:url('images/interior.jpg')" aria-hidden="true"></div>
+    <div class="hero-slide" style="background-image:url('images/exterior.jpg')" aria-hidden="true"></div>
+  </div>
 
-<h1>The Sips N Bites Co.</h1>
+  <div class="hero-content">
 
-<p>
-Good Food. Good Coffee. Good Company.
-</p>
+  <h1>The Sips N Bites Co.</h1>
 
-<a href="#menu-section" class="btn btn-warning btn-lg">
-Explore Menu
-</a>
+  <p>
+  Good Food. Good Coffee. Good Company.
+  </p>
 
-</div>
+
+  <div class="hero-actions">
+    <a href="#menu-section" class="btn btn-warning btn-lg me-3">
+      Explore Menu
+    </a>
+  </div>
+
+  </div>
 
 </section>
 
+<!-- Offers section removed per request -->
 <!-- Welcome -->
 
 <section class="welcome-section text-center py-5">
@@ -149,27 +163,36 @@ we offer the perfect place to Eat • Sip • Relax.
 
 <!-- Menu -->
 
+<!-- Surprise Me (moved below About) -->
+<section id="surprise-section" class="container py-4">
+  <div class="text-center">
+    <h3>🎲 Surprise Me</h3>
+    <p class="text-muted">Can't decide? Let us pick something delicious for you.</p>
+    <div class="d-flex justify-content-center align-items-center gap-2">
+      <button id="surprise-btn" class="btn btn-outline-warning btn-lg">🎲 Surprise Me</button>
+    </div>
+    <div id="surprise-result" class="surprise-result mt-3" aria-live="polite"></div>
+  </div>
+</section>
+
+
 <section id="menu-section" class="container py-5">
 
 <h2 class="text-center mb-5">Our Menu</h2>
-<p class="text-center mb-4 text-muted">Click any preview to view the full menu photo without leaving the page.</p>
-<div class="row mb-4 gx-3 gy-3">
-  <div class="col-md-4">
-    <div class="card menu-photo menu-photo-trigger h-100 overflow-hidden" data-full="images/food.jpg" role="button" tabindex="0">
-      <img src="images/food.jpg" alt="Fresh cafe food" class="img-fluid">
-      <div class="photo-label">Fresh favorites</div>
+<div class="menu-card-horizontal mb-4" aria-label="Menu cards">
+  <div class="menu-card-horizontal-item">
+    <div class="card menu-photo menu-photo-trigger h-100 overflow-hidden" data-full="images/menucard/1.webp" role="button" tabindex="0" aria-label="View menu card 1">
+      <img src="images/menucard/1.webp" alt="Menu card 1" class="img-fluid">
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="card menu-photo menu-photo-trigger h-100 overflow-hidden" data-full="images/interior.jpg" role="button" tabindex="0">
-      <img src="images/interior.jpg" alt="Cozy cafe seating" class="img-fluid">
-      <div class="photo-label">Cozy atmosphere</div>
+  <div class="menu-card-horizontal-item">
+    <div class="card menu-photo menu-photo-trigger h-100 overflow-hidden" data-full="images/menucard/2.webp" role="button" tabindex="0" aria-label="View menu card 2">
+      <img src="images/menucard/2.webp" alt="Menu card 2" class="img-fluid">
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="card menu-photo menu-photo-trigger h-100 overflow-hidden" data-full="images/exterior.jpg" role="button" tabindex="0">
-      <img src="images/exterior.jpg" alt="Cafe exterior" class="img-fluid menu-photo-img menu-photo-exterior">
-      <div class="photo-label">Relaxing vibe</div>
+  <div class="menu-card-horizontal-item">
+    <div class="card menu-photo menu-photo-trigger h-100 overflow-hidden" data-full="images/menucard/3.webp" role="button" tabindex="0" aria-label="View menu card 3">
+      <img src="images/menucard/3.webp" alt="Menu card 3" class="img-fluid">
     </div>
   </div>
 </div>
@@ -202,7 +225,7 @@ we offer the perfect place to Eat • Sip • Relax.
 <h5>Cold Coffee</h5>
 
 <ul>
-<li>Classic Cold Coffee - ₹119</li>
+<li>Classic Cold Coffee - ₹119 <span class="badge-pill">Best Seller</span></li>
 </ul>
 
 <h5>Frappes</h5>
@@ -221,7 +244,7 @@ we offer the perfect place to Eat • Sip • Relax.
 <li>Lime Twist - ₹89</li>
 <li>Watermelon Breeze - ₹89</li>
 <li>Green Apple Snap - ₹89</li>
-<li>Virgin Blue Lagoon - ₹89</li>
+<li>Virgin Blue Lagoon - ₹89 <span class="badge-pill">Best Seller</span></li>
 </ul>
 
 </div>
@@ -248,7 +271,7 @@ we offer the perfect place to Eat • Sip • Relax.
 <ul>
 <li>Classic American Burger - ₹119</li>
 <li>Crispy Veg Burger - ₹119</li>
-<li>Cheesy Afghani Burger - ₹129</li>
+<li>Cheesy Afghani Burger - ₹129 <span class="badge-pill">Best Seller</span></li>
 <li>Crispy Vegan Veg Burger - ₹129</li>
 <li>Classic Chicken Burger - ₹119</li>
 <li>American Chicken Burger - ₹129</li>
@@ -292,7 +315,7 @@ we offer the perfect place to Eat • Sip • Relax.
 
 <ul>
 <li>Crispy Belgian Chocolate - ₹129</li>
-<li>Nutella Blast - ₹159</li>
+<li>Nutella Blast - ₹159 <span class="badge-pill">Best Seller</span></li>
 <li>Crunchy Butterscotch Waffle - ₹149</li>
 <li>Kunafa Delight - ₹159</li>
 </ul>
@@ -338,7 +361,7 @@ we offer the perfect place to Eat • Sip • Relax.
 
 <div class="col-md-3 mb-4">
 <div class="card menu-card text-center p-3">
-<h4>☕ Classic Cold Coffee</h4>
+<h4>☕ Classic Cold Coffee <span class="badge-pill">Best Seller</span></h4>
 <p>Creamy, chilled coffee blended to perfection.</p>
 <h5>₹119</h5>
 </div>
@@ -346,7 +369,7 @@ we offer the perfect place to Eat • Sip • Relax.
 
 <div class="col-md-3 mb-4">
 <div class="card menu-card text-center p-3">
-<h4>🧇 Nutella Blast</h4>
+<h4>🧇 Nutella Blast <span class="badge-pill">Best Seller</span></h4>
 <p>Loaded waffle with rich and creamy Nutella.</p>
 <h5>₹159</h5>
 </div>
@@ -354,7 +377,7 @@ we offer the perfect place to Eat • Sip • Relax.
 
 <div class="col-md-3 mb-4">
 <div class="card menu-card text-center p-3">
-<h4>🍔 Cheesy Afghani Burger</h4>
+<h4>🍔 Cheesy Afghani Burger <span class="badge-pill">Best Seller</span></h4>
 <p>Creamy Afghani flavours with melted cheese.</p>
 <h5>₹129</h5>
 </div>
@@ -362,7 +385,7 @@ we offer the perfect place to Eat • Sip • Relax.
 
 <div class="col-md-3 mb-4">
 <div class="card menu-card text-center p-3">
-<h4>🥤 Virgin Blue Lagoon</h4>
+<h4>🥤 Virgin Blue Lagoon <span class="badge-pill">Best Seller</span></h4>
 <p>Vibrant citrus cooler with tropical flavours.</p>
 <h5>₹89</h5>
 </div>
@@ -443,7 +466,19 @@ we offer the perfect place to Eat • Sip • Relax.
   </div>
 </div>
 
+<div class="gallery-group">
+  <h3 class="gallery-category-title">Menu Cards</h3>
+  <div class="gallery-grid">
+    <div class="gallery-card"><img src="images/menucard/1.webp" alt="Menu card 1" class="gallery-img"></div>
+    <div class="gallery-card"><img src="images/menucard/2.webp" alt="Menu card 2" class="gallery-img"></div>
+    <div class="gallery-card"><img src="images/menucard/3.webp" alt="Menu card 3" class="gallery-img"></div>
+  </div>
+</div>
+
 </section>
+
+<!-- Reserve -->
+<!-- Reserve section removed -->
 
 <!-- Contact -->
 
@@ -460,7 +495,7 @@ we offer the perfect place to Eat • Sip • Relax.
   </div>
 
   <div class="info-card">
-    <h4>Contact Us</h4>
+    <h4>To Reserve a Table:   Call Us</h4>
     <p>+91 9175372016</p>
   </div>
 
@@ -490,6 +525,39 @@ we offer the perfect place to Eat • Sip • Relax.
   <div class="info-card">
     <h4>REVIEWS</h4>
     <p>“A cozy cafe with amazing coffee, tasty bites, and a warm vibe. Highly recommended for casual meetups and quick meals.”</p>
+    <p class="mt-2"><a href="https://www.google.com/maps/search/?api=1&query=The+Sips+N+Bites+Co+Pune" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning btn-sm">See Google Reviews</a></p>
+  </div>
+</div>
+
+  </div>
+
+  <div class="map-embed mt-4">
+    <iframe src="https://www.google.com/maps?q=Shop+No-19+Mantra+Montana+Society+Dhanori+Pune&output=embed" width="100%" height="320" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+<!-- Sample customer reviews -->
+<div id="reviews" class="customer-reviews mt-4 mb-5">
+  <h3 class="text-center mb-3">What Our Customers Say</h3>
+  <div class="review-list">
+    <div class="review-item">
+      <h5>Priya K. <span class="small text-warning">★★★★★</span></h5>
+      <p>Cozy space and amazing coffee — the perfect spot for catchups. The staff were warm and the menu has great variety.</p>
+    </div>
+
+    <div class="review-item">
+      <h5>Aman S. <span class="small text-warning">★★★★★</span></h5>
+      <p>Best waffles in town! Nutella Blast is a must-try. Great place to hang out with friends.</p>
+    </div>
+
+    <div class="review-item">
+      <h5>Neha R. <span class="small text-warning">★★★★☆</span></h5>
+      <p>Comfortable seating and decent Wi‑Fi — good for working remotely. Coffee was rich and well-balanced.</p>
+    </div>
+
+    <div class="review-item">
+      <h5>Rahul M. <span class="small text-warning">★★★★☆</span></h5>
+      <p>Quick service and tasty burgers. Reasonable prices and friendly staff. Will visit again.</p>
+    </div>
   </div>
 </div>
 
@@ -536,6 +604,8 @@ we offer the perfect place to Eat • Sip • Relax.
   <img id="overlay-img" src="" alt="Full size photo" class="overlay-image">
 </div>
 
+<a href="https://wa.me/919175372016?text=Hello%20The%20Sips%20N%20Bites%20Co.%20I%27d%20like%20to%20order" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">💬 Order Now</a>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   const overlay = document.getElementById('image-overlay');
@@ -556,13 +626,13 @@ we offer the perfect place to Eat • Sip • Relax.
   }
 
   document.querySelectorAll('.menu-photo-trigger').forEach(trigger => {
-    const fullSrc = trigger.dataset.full;
     const img = trigger.querySelector('img');
-    trigger.addEventListener('click', () => openOverlay(fullSrc, img.alt));
+    const fullSrc = trigger.dataset.full || (img && img.src);
+    trigger.addEventListener('click', () => { if (fullSrc) openOverlay(fullSrc, img.alt); });
     trigger.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        openOverlay(fullSrc, img.alt);
+        if (fullSrc) openOverlay(fullSrc, img.alt);
       }
     });
   });
@@ -579,6 +649,99 @@ we offer the perfect place to Eat • Sip • Relax.
       closeOverlay();
     }
   });
+
+  // Scroll reveal animations for elements with .reveal
+  (function(){
+    const revealElements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) return;
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealElements.forEach(el => obs.observe(el));
+  })();
+
+  // Reservation handling removed
+
+  // Hero slider (simple fade carousel)
+  (function(){
+    const slides = document.querySelectorAll('.hero-slide');
+    if (!slides || slides.length === 0) return;
+    let current = 0;
+    function showSlide(i){
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === i);
+        s.setAttribute('aria-hidden', idx !== i);
+      });
+    }
+    showSlide(current);
+    let timer = setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 5000);
+    const heroEl = document.querySelector('.hero');
+    heroEl.addEventListener('mouseenter', () => clearInterval(timer));
+    heroEl.addEventListener('mouseleave', () => {
+      timer = setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 5000);
+    });
+  })();
+
+  // Surprise Me picker — suggest random combos from the menu in-place (no scrolling)
+  (function(){
+    const btn = document.getElementById('surprise-btn');
+    const result = document.getElementById('surprise-result');
+    if (!btn || !result) return;
+
+    // collect items grouped by menu card/category
+    function collectMenuPools(){
+      const cards = Array.from(document.querySelectorAll('#menu-section .menu-card'));
+      const pools = cards.map(card => {
+        const title = (card.querySelector('h3') || card.querySelector('h4') || {}).textContent || '';
+        const items = Array.from(card.querySelectorAll('li')).map(li => li.textContent.trim()).filter(Boolean);
+        return { title: title.trim(), items };
+      }).filter(pool => pool.items && pool.items.length > 0);
+      return pools;
+    }
+
+    function makeCombo(pools){
+      if (!pools || pools.length === 0) return null;
+      // decide combo size 1..min(3, pools.length)
+      const maxSize = Math.min(3, pools.length);
+      const size = Math.floor(Math.random() * maxSize) + 1;
+      // shuffle pool indices
+      const indices = pools.map((_, i) => i).sort(() => Math.random() - 0.5).slice(0, size);
+      const picks = indices.map(i => {
+        const pool = pools[i];
+        const item = pool.items[Math.floor(Math.random() * pool.items.length)];
+        return { category: pool.title || 'Item', item };
+      });
+      return picks;
+    }
+
+    btn.addEventListener('click', () => {
+      const pools = collectMenuPools();
+      if (!pools || pools.length === 0) {
+        result.textContent = 'No menu items found to pick from.';
+        result.classList.add('visible');
+        setTimeout(() => result.classList.remove('visible'), 3000);
+        return;
+      }
+      const combo = makeCombo(pools);
+      if (!combo || combo.length === 0) return;
+      const comboText = combo.map(p => p.item).join(' + ');
+      const details = combo.map(p => (p.category ? `${p.item} (${p.category})` : p.item)).join(' • ');
+      result.innerHTML = `<strong>Try this combo:</strong> ${comboText}<div class="small text-muted">${details}</div>`;
+      result.classList.add('visible');
+      setTimeout(() => result.classList.remove('visible'), 5000);
+    });
+  })();
 </script>
 
 </body>
